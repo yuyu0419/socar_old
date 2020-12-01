@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+
+@font-face {
+    font-family: 'AvenirLTPro-Black';
+    src: url('../fonts/392D54_A_0.eot');
+    src: url('../fonts/392D54_A_0.eot?#iefix') format('embedded-opentype'), url('../fonts/392D54_A_0.woff2') format('woff2'), url('../fonts/392D54_A_0.woff') format('woff'), url('../fonts/392D54_A_0.ttf') format('truetype');
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+ul,
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+strong {
+    margin: 0;
+    white-space: pre-line;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+article {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/*헤더*/
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.001));
+}
+
+header:hover {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+    border-bottom: 1px solid #bfbfbf;
+}
+
+header nav {
+    width: 70%;
+    margin: 1% auto;
+}
+
+
+.navigation {
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation li {
+    display: block;
+}
+
+.navigation li a {
+    color: #fff;
+    font-size: 2rem;
+}
+.burger{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+.burger span{
+    display: block;
+    width:100%;
+    height:2px;
+    background-color: #fff;
+    margin-bottom: 6px;
+}
+
+header:hover .navigation li a {
+    color: #5a5b5d;
+    font-weight: 500;
+}
+
+.navHover {
+    display: none;
+    margin: 1rem 0;
+}
+
+.navHover a {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: lighter;
+    color: #5a5b5d;
+    padding: 0.5rem 0;
+    transition: .3s;
+}
+
+header:hover .navHover {
+    display: block;
+}
+
+header:hover .navigation li a:hover {
+    color: #00B8FF;
+}
+
+.toHome {
+    display: block;
+    width:12.5rem;
+    background: url(../img/common/logo_w.png) center no-repeat;
+    background-size: 100%;
+    transition: .5s;
+}
+
+
+header:hover .toHome {
+    width:13rem;
+    background: url(../img/common/logo_b.png) top no-repeat;
+    background-size: 100%;
+}
+
+.indigater{
+    z-index: 200;
+    position: fixed;
+    top:50%;
+    left: 0;
+    transform: translate(0%,-50%);
+}
+
+.indigater a {
+    display: block;
+    color: #fff;
+    font-size: 4rem;
+}
+
+.indigater a.active {
+    color: #00B8FF;
+}
+
+.indigater a span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 2rem;
+    height: 0.2rem;
+    background-color: #00B8FF;
+}
+
+
+/*메뉴 오픈*/
+.menu{
+    width: 60%;
+    height:100vh;
+    background-color:#fff;
+    position: fixed;
+    transition: .5s;
+    z-index: 0;
+    right:-100%;
+    border-left: 1px solid #bfbfbf;
+}
+.menu.active{
+    z-index: 200;
+    position: fixed;
+    right: 0;
+}
+.menu ul{
+    width:80%;
+    margin: 0 auto;
+    padding: 0;
+    transform: translate(0,50%);
+}
+.btn{
+    position: absolute;
+    top:3%;
+    right:15%;
+}
+.close{
+    margin: 0;
+    width: 30px;
+    height:30px;
+}
+.close span{
+    display: block;
+    width:30px;
+    height:2px;
+    background-color: #5a5b5d;
+}
+.close span:nth-of-type(1){
+    position: absolute;
+    transform: rotate(45deg);
+}
+.close span:nth-of-type(2){
+    position: absolute;
+    transform: rotate(-45deg);
+}
+.menu ul li{
+    font-weight: 600;
+    font-size: 2.6rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 20%;
+}
+.menu ul li:nth-of-type(1){
+    background: url('../img/common/logo_b.png') center no-repeat;
+    width:150px;
+    height: 30px;
+    background-size: 100%;
+    margin-bottom: 10%;
+}
+.menu ul li a{
+    color:  #5a5b5d;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.info{
+    margin-top: 2%;
+    margin-left: 10%;
+    font-weight: 400;
+}
+.info a{
+    
+    display: block;}
+
+
+/*스크롤*/
+.scroll {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    animation: move .5s alternate-reverse infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 50%);
+    }
+}
+
+.scroll img {
+    width: 80%;
+}
+/*서브의 좌표*/
+.map{
+    width:70%;
+    margin: 0.5rem auto;
+    text-align: right;
+}
+.map a{
+    font-size: 1.6rem;
+    width:100%;
+    color: #505456;
+}
+
+
+/*풋터*/
+footer {
+    width: 100%;
+    height: 23rem;
+    background-color: #28323c;
+    margin: 0;
+    font-weight: 300;
+}
+
+.footerPack {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.aTag {
+    padding: 2% 0;
+}
+
+.aTag a {
+    margin: 2.5% 0;
+    margin-right: 2rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.fBottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.fBottom p {
+    width:85%;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.sns {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width:15%;
+}
+
+.sns a {}
+
+.sns a img {
+    width: 85%;
+}
+
+
+
+/* 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) { 
+    header nav {
+        margin: 3% auto;
+    }
+    .navigation li a {
+        font-size: 1.8rem;
+    }
+
+    .navHover a {
+        font-size: 1.8rem;
+    }
+
+    .toHome {
+        width:10rem;
+    }
+
+    header:hover .toHome {
+        width:10rem;
+    }
+
+    .indigater a {
+        font-size: 3.4rem;
+    }
+
+    .indigater a span {
+        width: 1.6rem;
+    }
+    .menu{
+        display: none;
+    }
+
+    /*서브의 좌표*/
+    .map a{
+        font-size: 1.4rem;
+    }
+    
+    /*풋터*/
+    footer {
+        height: 20rem;
+    }
+    
+    .footerPack {
+        width: 70%;
+        margin: 0 auto;
+        transform: translate(0,20%);
+    }
+    .aTag a {
+        margin: 2% 0;
+        margin-right: 1rem;
+        font-size: 1.2rem;
+    }
+    .fBottom p {
+        font-size: 1rem;
+    }
+    .sns a img {
+        width: 100%;
+    }
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width:480px) and (max-width:767px) {
+    header nav {
+        width:80%;
+        margin: 3% auto;
+    }
+
+    .navigation li{
+        display: none;
+    }
+    
+    .navigation li a {
+        font-size: 1.6rem;
+    }
+
+    .navHover a {
+        font-size: 1.6rem;
+    }
+    .burger{
+        display: block;
+    }
+
+    .toHome {
+        width:8rem;
+    }
+
+    header:hover {
+        width: 100%;
+        background:none;
+        border-bottom: 0px solid #bfbfbf;
+    }
+
+    header:hover .toHome {
+        width:8rem;
+        background: url(../img/common/logo_w.png) center no-repeat;
+        background-size: 100%;
+    }
+    
+    .indigater a {
+        font-size: 3rem;
+    }
+
+    .indigater a span {
+        width: 1.2rem;
+    }
+
+    /*서브의 좌표*/
+    .map{
+        width:80%;
+    }
+    .map a{
+        font-size: 1.4rem;
+    }
+
+    /*풋터*/
+    footer {
+        height: 15rem;
+    }
+    
+    .footerPack {
+        width:80%;
+        margin: 0 auto;
+        transform: translate(0,20%);
+    }
+    
+    .aTag {
+        display: none;
+    }
+    .fBottom p {
+        font-size: 1rem;
+    }
+    .sns a img {
+        width: 100%;
+    }
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+@media all and (max-width:479px) {
+    header nav {
+        margin: 5% auto;
+        width:80%;
+    }
+
+    .navigation li{
+        display: none;
+    }
+
+    .navigation li a {
+        font-size: 1.4rem;
+
+    }
+
+    .navHover a {
+        font-size: 1.4rem;
+    }
+
+    .toHome {
+        width:7rem;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .indigater a {
+        font-size: 2.6rem;
+    }
+
+    .indigater a span {
+        width: 1rem;
+    }
+    header:hover {
+        width: 100%;
+        background:none;
+        border-bottom: 0px solid #bfbfbf;
+    }
+
+    header:hover .toHome {
+        width:7rem;
+        background: url(../img/common/logo_w.png) center no-repeat;
+        background-size: 100%;
+    }
+
+    /*메뉴 오픈*/
+    .menu{
+        width: 70%;
+    }
+    .btn{
+        position: absolute;
+        top:3%;
+        right:15%;
+    }
+    .menu ul{
+        transform: translate(0,100%);
+    }
+
+    .menu ul li{
+        font-size: 2.4rem;
+        margin-bottom: 10%;
+    }
+    .menu ul li:nth-of-type(1){
+        width:120px;
+        height: 25px;
+        background-size: 100%;
+        margin-bottom: 5%;
+    }
+
+    /*서브의 좌표*/
+    .map{
+        display: none;
+    }
+
+    /*풋터*/
+    footer {
+        height: 7rem;
+    }
+    
+    .footerPack {
+        width: 80%;
+        margin: 0 auto;
+        transform: translate(0,20%);
+        position: relative;
+    }
+    
+    .aTag {
+    }
+    .aTag a{
+        font-size: 1rem;
+        margin-bottom: 2%;
+    }
+    .fBottom p {
+        display: none;
+    }
+    .sns{
+        width:20%;
+        position: absolute;
+        right:0%;
+        bottom:0%;
+    }
+    .sns a img {
+        width: 80%;
+    }
+}

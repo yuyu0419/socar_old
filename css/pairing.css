@@ -1,0 +1,534 @@
+@import url(service_common.css);
+
+.pairing_article {
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.pairing_article figure {
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.pairing_article figure img {
+    width: 100%;
+}
+
+.pairing_article figure figcaption {
+    width: 70%;
+    margin: 0 auto;
+    position: absolute;
+    top: 35%;
+    left: 15%;
+}
+
+.pairing_article figure figcaption p {
+    font-size: 2.4rem;
+    color: #fff;
+}
+
+.pairing_article figure figcaption p strong {
+    font-size: 5rem;
+    color: #fff;
+}
+
+.pairing_exp {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.pairing_exp h3 {
+    font-size: 3rem;
+    color: #505456;
+    text-align: right;
+}
+
+.pairing_exp ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.pairing_sub {
+    margin:5% 0;
+    width: 100%;
+}
+
+.pairing_sub:nth-child(4) {
+    text-align: right;
+}
+
+.pairing_sub p {
+    font-size: 2rem;
+    color: #505456;
+    letter-spacing: -0.5px;
+}
+
+.pairing_sub p strong {
+    font-size: 2.6rem;
+    color: #505456;
+}
+
+.pairing_exp ul li {
+    width: 45%;
+    margin-bottom: 10%;
+}
+
+.pairing_exp ul li img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.pairing_exp ul li p {
+    font-size: 1.8rem;
+    color: #ff6f61;
+    text-decoration: underline;
+    margin-bottom: 0.5rem;
+}
+
+.pairing_exp ul li strong {
+    font-size: 3rem;
+    text-decoration: none;
+    color: #505456;
+    white-space: normal;
+}
+
+
+.pairing_instructions {
+    width: 70%;
+    margin: 3% auto;
+    margin-bottom: 10%;
+}
+
+.pairing_sub2 {
+    margin-bottom: 2%;
+}
+
+.pairing_sub2 h4 {
+    font-size: 3rem;
+    color: #505456;
+}
+
+.pairing_sub2 p {
+    font-size: 2rem;
+    color: #505456;
+}
+
+
+.pairing_instructions ul {
+    display: flex;
+    justify-content: space-between;
+    margin:0;
+    padding:0;
+}
+
+.pairing_instructions ul li {
+    width: 25%;
+
+}
+
+.pairing_instructions ul li img {
+    width: 90%;
+}
+
+.pairing_instructions ul li p {
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    font-size: 2rem;
+    color: #505456;
+    width:75%;
+    margin:0 auto;
+    /* white-space: normal; */
+}
+
+.pairing_instructions ul li p span {
+    display: block;
+    color: #ff6f61;
+    text-decoration: underline;
+}
+
+.pairing_instructions ul li p strong {
+    font-size: 2.6rem;
+    color: #505456;
+}
+
+.footer {
+    width: 100%;
+
+}
+
+.footerPack {
+    background-color: #dcdddd;
+    width: 100%;
+    font-weight: 300;
+}
+
+.footerPack div {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.footerPack p {
+    font-size: 1.6rem;
+    color: #505456;
+}
+
+.footerPack p img {
+    width: 100%;
+}
+
+
+/* 테블릿  PC(해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {
+.pairing_article figure figcaption {
+    top: 25%;
+}
+
+.pairing_article figure figcaption p {
+    font-size: 2rem;
+}
+
+.pairing_article figure figcaption p strong {
+    font-size: 3.6rem;
+}
+.pairing_exp h3 {
+    font-size: 2.6rem;
+    line-height: 1.2;
+}
+.pairing_sub{
+    margin:10% 0;
+}
+.pairing_sub p {
+    font-size: 1.8rem;
+}
+
+.pairing_sub p strong {
+    font-size: 2.2rem;
+}
+.pairing_exp ul li p {
+    font-size: 1.6rem;
+}
+.pairing_exp ul li{
+    margin-bottom: 5%;
+}
+.pairing_exp ul li strong {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+
+.pairing_instructions {
+    width: 70%;
+    margin: 3% auto;
+    margin-bottom: 10%;
+}
+
+.pairing_sub2 {
+    margin-bottom: 2%;
+}
+
+.pairing_sub2 h4 {
+    font-size: 2.2rem;
+}
+
+.pairing_sub2 p {
+    font-size: 1.8rem;
+}
+
+
+.pairing_instructions ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pairing_instructions ul li {
+    width: 45%;
+    margin-bottom: 5%;
+
+}
+
+.pairing_instructions ul li img {
+    width: 75%;
+}
+
+.pairing_instructions ul li p {
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    font-size: 1.8rem;
+    width:100%;
+}
+.pairing_instructions ul li p strong {
+    font-size: 2rem;
+}
+.footerPack p {
+    font-size: 1rem;
+}
+
+.footerPack p img {
+    width: 50%;
+}
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width:480px) and (max-width:767px) {
+
+    .pairing_article figure figcaption {
+        width: 80%;
+        margin: 0 auto;
+        position: absolute;
+        top: 25%;
+        left: 10%;
+    }
+    
+    .pairing_article figure figcaption p {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .pairing_article figure figcaption p strong {
+        font-size: 2.4rem;
+        color: #fff;
+    }
+    
+    .pairing_exp {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .pairing_exp h3 {
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+    .pairing_sub{
+    margin:20% 0 10% 0;
+    }
+    .pairing_sub p {
+        font-size: 1.6rem;
+    }
+    .pairing_sub p strong {
+        font-size: 2rem;
+        color: #505456;
+    }
+    .pairing_exp ul{
+        flex-direction: column;
+    }
+    
+    .pairing_exp ul li {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
+    .pairing_exp ul:nth-of-type(1) li:nth-of-type(2){
+        margin-bottom: 0;
+    }
+    
+    .pairing_exp ul li img {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    
+    .pairing_exp ul li p {
+        font-size: 1.6rem;
+        color: #ff6f61;
+        text-decoration: underline;
+        margin-bottom: 0.5rem;
+    }
+    
+    .pairing_exp ul li strong {
+        font-size: 1.8rem;
+    }
+    
+    
+    .pairing_instructions {
+        width: 80%;
+        margin: 5% auto;
+        margin-bottom: 10%;
+    }
+    
+    .pairing_sub2 h4 {
+        font-size: 2rem;
+    }
+    
+    .pairing_sub2 p {
+        font-size: 1.6rem;
+    }
+    
+    
+    .pairing_instructions ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pairing_instructions ul li {
+        width: 100%;
+    
+    }
+    
+    .pairing_instructions ul li img {
+        width: 60%;
+        margin:0 auto;
+        margin-left: 20%;
+    }
+    
+    .pairing_instructions ul li p {
+        font-size: 1.6rem;
+        width:70%;
+        margin:0 auto;
+        text-align: center;
+    
+    }
+    
+
+    .pairing_instructions ul li p strong {
+        font-size: 1.8rem;
+    }
+    
+    .footerPack div {
+        width: 80%;
+    }
+    
+    .footerPack p {
+        font-size: 1rem;
+    }
+    
+    .footerPack p img {
+        width: 60%;
+    }
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+@media all and (max-width:479px) {
+    .pairing_article figure figcaption {
+        width: 80%;
+        top: 20%;
+        left: 10%;
+    }
+    
+    .pairing_article figure figcaption p {
+        font-size: 1.6rem;
+        line-height: 1.1;
+    }
+    
+    .pairing_article figure figcaption p strong {
+        font-size: 2rem;
+    }
+    
+    .pairing_exp {
+        width: 80%;
+    }
+    
+    .pairing_exp h3 {
+        font-size: 1.6rem;
+    }
+    
+    .pairing_exp ul {
+        flex-direction: column;
+    }
+    
+    .pairing_sub {
+        margin:5% 0;
+    }
+    
+    .pairing_sub:nth-child(4) {
+        text-align: right;
+    }
+    
+    .pairing_sub p {
+        font-size: 1.4rem;
+    }
+    
+    .pairing_sub p strong {
+        font-size: 1.8rem;
+    }
+    
+    .pairing_exp ul li {
+        width: 100%;
+    }
+    
+    .pairing_exp ul li img {
+        margin-bottom: 1rem;
+    }
+    
+    .pairing_exp ul li p {
+        font-size: 1.4rem;
+    }
+    
+    .pairing_exp ul li strong {
+        font-size: 1.6rem;
+    }
+    
+    
+    .pairing_instructions {
+        width: 80%;
+        margin: 3% auto;
+        margin-bottom: 10%;
+    }
+    
+    .pairing_sub2 {
+        margin-bottom: 2%;
+    }
+    
+    .pairing_sub2 h4 {
+        font-size: 1.8rem;
+    }
+    
+    .pairing_sub2 p {
+        font-size: 1.4rem;
+    }
+    
+    .pairing_instructions{
+        margin-top: 10%;
+    }
+    .pairing_instructions ul {
+        flex-direction: column;
+    }
+    
+    .pairing_instructions ul li {
+        width: 100%;
+    
+    }
+    
+    .pairing_instructions ul li img {
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    .pairing_instructions ul li p {
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+        font-size: 1.4rem;
+        color: #505456;
+        width:75%;
+        margin:0 auto;
+        /* white-space: normal; */
+    
+    }
+
+    .pairing_instructions ul li p strong {
+        font-size: 1.8rem;
+    }
+    
+    .footerPack div {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+    
+    .footerPack p {
+        font-size: 1rem;
+    }
+    
+    .footerPack p img {
+        display: none;
+    }
+    
+}

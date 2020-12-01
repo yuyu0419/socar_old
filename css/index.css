@@ -1,0 +1,261 @@
+@import url(common.css);
+
+body{
+    overflow: hidden;
+    height: 100vh;
+}
+main{
+    transition: .5s;
+}
+article{
+    overflow: hidden;
+}
+
+.main1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.main2{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.main3{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.main4{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.main5{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mainVisual {
+    width: 100%;
+    height: 100vh;
+    font-size: 0;
+}
+
+.mainVisual video{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 120vh;
+}
+
+.mainVisual img {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 0;
+    /* width: 120vw; */
+    height: 120vh;
+}
+
+.right {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translate(0, -50%);
+    text-align: right;
+    
+}
+
+.right h2 {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin: 0;
+    color: #fff;
+}
+
+.right h2 strong {
+    margin: 0;
+    color: #00B8FF;    
+}
+
+.right h2 a{
+    padding-right: 4rem;
+    background: url('../img/index/arrow_r.png') right no-repeat;
+    font-size: 2rem;
+    background-size: 30%;
+    color: #fff;
+}
+
+
+.left{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(0, -50%);
+    text-align: right;
+    color: #fff;
+}
+.left h2{
+    line-height: 1.1;
+    font-size: 5rem;
+}
+
+.left h2 strong {
+    margin: 0;
+    color: #00B8FF;    
+}
+
+.left h2 a{
+    padding-right: 4rem;
+    background: url('../img/index/arrow_r.png') right no-repeat;
+    font-size: 2rem;
+    background-size: 30%;
+    color: #fff;
+}
+
+/*어플다운로드*/
+.download {
+    position: fixed;
+    right: -0.1%;
+    bottom: -0.3%;
+    z-index: 200;
+    width:200px;
+}
+
+.download img {
+    width:100%;
+}
+
+
+@media all and (min-width:768px) and (max-width:1023px) {
+    .mainVisual video{
+        height: 100vh;
+    }
+    
+    .mainVisual img {
+        height: 100vh;
+    }
+
+    .right h2 {
+        font-size: 3.6rem;
+    }
+
+    .right h2 a{
+        font-size: 2rem;
+    }
+
+    .left h2{
+        font-size: 3.6rem;
+    }
+
+    .left h2 a{
+        font-size: 2rem;
+    }
+
+    /*어플다운로드*/
+    .download {
+        width:180px;
+    }
+}
+
+
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width:480px) and (max-width:767px) {
+    .mainVisual video{
+        height: 100vh;
+    }
+    
+    .mainVisual img {
+        height: 100vh;
+    }
+    
+    .right {
+        right: 10%;
+    }
+    
+    .right h2 {
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+    
+    .right h2 a{
+        padding-right: 4rem;
+        font-size: 1.8rem;
+    }
+
+    .left{
+        left: 10%;
+    }
+
+    .left h2{
+        line-height: 1.1;
+        font-size: 3rem;
+    }
+    
+    .left h2 a{
+        padding-right: 4rem;
+        font-size: 1.8rem;
+    }
+    
+    /*어플다운로드*/
+    .download {
+        width:150px;
+    }
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+@media all and (max-width:479px) {
+    .mainVisual video{
+        height: 100vh;
+    }
+    
+    .mainVisual img {
+        height: 100vh;
+    }
+    
+    .right {
+        width:100%;
+        right: 0%;
+        text-align:center;
+    }
+    
+    .right h2 {
+        font-size: 2.4rem;
+        line-height: 1.1;
+    }
+
+    .right h2 a{
+        padding-right: 4rem;
+        font-size: 1.8rem;
+    }
+    .left{
+        width:100%;
+        left: 0%;
+        text-align: center;
+    }
+    .left h2{
+        line-height: 1.1;
+        font-size: 2.4rem;
+    }
+    .left h2 a{
+        font-size: 1.8rem;
+    }
+    
+    /*어플다운로드*/
+    .download {
+        position: fixed;
+        right: -0.1%;
+        bottom: -0.3%;
+        z-index: 200;
+        width:100px;
+    }
+}

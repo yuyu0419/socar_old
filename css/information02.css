@@ -1,0 +1,394 @@
+@import url(common.css);
+
+body{
+    /* position: relative; */
+}
+.top {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.top img {
+    width: 100%;
+}
+
+.info_top {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.info_top h2 {
+    text-align: center;
+    font-size: 5rem;
+    color: #fff;
+}
+
+.instructions {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20%;
+
+}
+
+.info2container {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.mobile {
+    /* transform: translate(0, -30%); */
+    width: 25%;
+    position: relative;
+}
+
+.mobile img {
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.mobile img.active{
+    display: block;
+}
+
+.info_right {
+    margin-top: 5%;
+    width: 75%;
+    height:100%;
+}
+
+.img_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width:100%;
+}
+
+.img_container a {
+    display: block;
+    width: 9rem;
+    height: 9rem;
+    background-color: #7fdbff;
+    border-radius: 100%;
+}
+
+.img_container a.active p{
+    font-size: 2.4rem;
+    background: none;
+    color: #fff;
+    transform: translate(25%, 15%);
+}
+.img_container a.active:nth-of-type(2) p{
+    background: none;
+    transform: translate(25%, 15%);
+}
+.img_container a.active:nth-of-type(3) p{
+    background: none;
+    transform: translate(25%, 15%);
+}
+.img_container a.active:nth-of-type(4) p{
+    background: none;
+    transform: translate(25%, 15%);
+}
+.img_container a.active:nth-of-type(5) p{
+    background: none;
+    transform: translate(25%, 15%);
+}
+
+.img_container a p {
+    width:100%;
+    height:100%;
+    font-size: 0rem;
+}
+
+.img_container a p {
+    background: url("../img/information/info02_1.png") center no-repeat;
+    transform:translate(3%,-15%);
+    background-size: 40%;
+    font-size: 0;
+}
+
+.img_container a:nth-of-type(2) p{
+    background: url("../img/information/info02_2.png") center no-repeat;
+    background-size: 30%;
+    transform:translate(0%,-15%);
+}
+
+.img_container a:nth-of-type(3) p{
+    background: url("../img/information/info02_3.png") center no-repeat;
+    background-size: 40%;
+    transform:translate(0%,-20%);
+}
+.img_container a:nth-of-type(4) p{
+    background: url("../img/information/info02_4.png") center no-repeat;
+    background-size: 40%;
+    transform:translate(0%,-15%);
+}
+.img_container a:nth-of-type(5) p{
+    background: url("../img/information/info02_5.png") center no-repeat;
+    background-size: 35%;
+    transform:translate(0%,-15%);
+}
+
+.img_container span{
+    display: block;
+    width:15px;
+    height: 15px;
+    transform: translate(0%, -100%);
+}
+.img_container span img{
+    width:80%
+}
+
+.description_container {
+    margin-top: 5%;
+}
+
+.description_container p {
+    width: 100%;
+    display: none;
+    font-size: 2rem;
+    color: #505456;
+}
+
+.description_container p.active {
+    display: block;
+}
+
+.description_container p strong {
+    font-size: 2.6rem;
+}
+
+
+
+
+/* 테블릿  PC(해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {
+    .info_top h2 {
+        font-size: 3.6rem;
+    }
+    .instructions {
+        margin-bottom: 10%;
+    }
+    .info2container {
+        display: flex;
+        justify-content: flex-end; 
+    }
+    .mobile {
+        width: 25%;
+        position: relative;
+    }
+
+    .img_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width:100%;
+    }
+    
+    .img_container a {
+        width: 6rem;
+        height: 6rem;
+    }
+    
+    .img_container a p {
+        font-size: 2rem;
+        transform: translate(20%, 0%);
+    }
+    
+    .img_container span{
+        display: block;
+        width:10px;
+        height: 10px;
+        transform: translate(0%, -100%);
+    }
+    .img_container span img{
+        width:100%
+    }
+    
+    
+    .img_container a.active p {
+        transform:translate(3%,-25%);
+    }
+    
+    .img_container a.active:nth-of-type(2) p{
+        transform:translate(0%,-25%);
+    }
+    
+    .img_container a.active:nth-of-type(3) p{
+        transform:translate(0%,-30%);
+    }
+    .img_container a.active:nth-of-type(4) p{
+        transform:translate(0%,-25%);
+    }
+    .img_container a.active:nth-of-type(5) p{
+        transform:translate(0%,-25%);
+    }
+    .description_container p {
+        font-size: 1.8rem;
+    }
+    .description_container p strong {
+        font-size: 2.2rem;
+    }
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width:480px) and (max-width:767px) {
+    .info_top h2 {
+        font-size: 3rem;
+    }
+    
+    .instructions {
+        width: 80%;
+        margin-bottom: 15%;
+    
+    }
+    
+    .info2container {
+        display: flex;
+        justify-content: space-around;
+    }
+    .mobile {
+        display: none;
+    }
+    .mobile img.active{
+        display: none;
+    }
+    .info_right{
+        width: 100%;
+    }
+    .img_container a {
+        width: 6rem;
+        height: 6rem;
+    }
+    
+    .img_container a p {
+        font-size: 2rem;
+        transform: translate(20%, 0%);
+    }
+
+    .img_container span img{
+        width:70%
+    }
+    
+    
+    .img_container a.active p {
+        background: url("../img/information/info02_1.png") center no-repeat;
+        transform:translate(3%,-25%);
+        background-size: 40%;
+        font-size: 0;
+    }
+    
+    .img_container a.active:nth-of-type(2) p{
+        transform:translate(0%,-20%);
+    }
+    
+    .img_container a.active:nth-of-type(3) p{
+        transform:translate(0%,-30%);
+    }
+    .img_container a.active:nth-of-type(4) p{
+        transform:translate(0%,-20%);
+    }
+    .img_container a.active:nth-of-type(5) p{
+        transform:translate(0%,-25%);
+    }
+    .description_container p {
+        font-size: 1.4rem;
+    }
+    .description_container p strong {
+        font-size: 2rem;
+    }
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+@media all and (max-width:479px) {
+    .info_top h2 {
+        font-size: 2.2rem;
+    }
+    .instructions {
+        width: 80%;
+        margin-bottom: 15%;
+    }
+    .info2container {
+        display: flex;
+        justify-content: flex-end; 
+    }
+    .mobile {
+        display: none;
+    }
+    .mobile img.active{
+        display:none;
+    }
+    .info_right {
+        margin-top: 10%;
+        width: 100%;
+    }
+    .img_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+    }
+    .img_container a {
+        width: 5rem;
+        height: 5rem;
+    }
+    
+    .img_container a p {
+        width:100%;
+        height:100%;
+        font-size: 1.6rem;
+        color: #fff;
+        transform: translate(20%, -5%);
+    }
+    
+    .img_container span{
+        display: block;
+        width:8px;
+        height: 8px;
+        transform: translate(0%, 00%);
+    }
+    .img_container span img{
+        width:70%
+    }
+    
+    
+    .img_container a.active p {
+        transform:translate(3%,-25%);
+        background-size: 50%;
+    }
+    
+    .img_container a.active:nth-of-type(2) p{
+        background-size: 40%;
+        transform:translate(0%,-30%);
+    }
+    
+    .img_container a.active:nth-of-type(3) p{
+        background-size: 50%;
+        transform:translate(0%,-30%);
+    }
+    .img_container a.active:nth-of-type(4) p{
+        background-size: 50%;
+        transform:translate(0%,-25%);
+    }
+    .img_container a.active:nth-of-type(5) p{
+        background-size: 50%;
+        transform:translate(0%,-25%);
+    }
+    
+    .description_container {
+        margin-top: 5%;
+    }
+    
+    .description_container p {
+        font-size: 1.4rem;
+    }
+    .description_container p strong {
+        font-size: 1.8rem;
+    }
+}

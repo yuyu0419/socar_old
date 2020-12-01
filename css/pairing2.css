@@ -1,0 +1,292 @@
+@import url(service_common.css);
+@import url(pairing.css);
+
+
+.pairing_article2 {
+    width: 100%;
+    font-size: 0;
+}
+
+.pairing_article2 figure {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    margin-bottom: 5%;
+}
+
+.pairing_article2 figure img {
+    width: 100%;
+}
+
+.pairing_article2 figure figcaption {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(0%,-50%);
+}
+
+.pairing_article2 figure figcaption strong {
+    font-size: 5rem;
+    color: #fff;
+}
+
+.owner1 {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.owner1 p {
+    width: 100%;
+    color: #505456;
+    font-size: 2rem;
+    text-align: center;
+    margin: 10% auto;
+}
+
+.owner1 p strong {
+    font-size: 3rem;
+}
+
+.owner2 {
+    width: 70%;
+    margin: 5% auto;
+}
+
+.owner2 div {
+    width: 100%;
+    text-align: center;
+    color: #505456;
+}
+
+.owner2 div h4 {
+    font-size: 3rem;
+}
+
+.owner2 div p {
+    font-size: 2rem;
+}
+
+.owner2 ul {
+    margin: 0;
+    padding:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 5% 0 10% 0;
+}
+
+.owner2 ul li {width: 25%;}
+
+.owner2 ul li span {
+    display: block;
+    width:18rem;
+    height:18rem;
+    border-radius: 100%;
+    background-color: #ff6f61;
+    margin: 0 auto;
+}
+
+.owner2 ul li span img {
+    width:25%;
+    transform: translate(150%,150%);
+}
+
+.owner2 ul li p {
+    color: #505456;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.owner2 ul li p strong {
+    font-size: 2.6rem;
+}
+
+@media all and (min-width:1024px) and (max-width:1440px) {
+    .owner2 ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .owner2 ul li {
+        width: 45%;
+        margin-bottom: 5%;
+    }
+}
+
+
+/* 테블릿  PC(해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {
+    .pairing_article2 figure figcaption strong {
+        font-size: 3.6rem;
+    }
+    
+    .owner1 p {
+        font-size: 2rem;
+        margin: 10% auto;
+        line-height: 1.3;
+    }
+    
+    .owner1 p strong {
+        font-size: 2.6rem;
+    }
+    
+    .owner2 {
+        margin: 10% auto;
+    }
+    .owner2 div h4 {
+        font-size: 2.6rem;
+    }
+    
+    .owner2 div p {
+        font-size: 2rem;
+    }
+    
+    .owner2 ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .owner2 ul li {
+        width: 45%;
+        margin-bottom: 5%;
+    }
+    
+    .owner2 ul li span {
+        display: block;
+        width:16rem;
+        height:16rem;
+    }
+    
+    .owner2 ul li p {
+        color: #505456;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .owner2 ul li p strong {
+        font-size: 2rem;
+    }
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width:480px) and (max-width:767px) {
+    .pairing_article2 figure figcaption {
+        left: 10%;
+    }
+    
+    .pairing_article2 figure figcaption strong {
+        font-size: 2.4rem;
+    }
+    
+    .owner1 {
+        width: 80%;
+    }
+    
+    .owner1 p {
+        font-size: 1.6rem;
+        text-align: center;
+        margin: 10% auto;
+    }
+    
+    .owner1 p strong {
+        font-size: 2rem;
+    }
+    
+    .owner2 {
+        width: 80%;
+    }
+
+    .owner2 div h4 {
+        font-size: 2rem;
+    }
+    
+    .owner2 div p {
+        font-size: 1.6rem;
+    }
+    
+    .owner2 ul {
+        flex-wrap: wrap;
+    }
+    
+    .owner2 ul li {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 5%;
+    }
+    
+    .owner2 ul li span {
+        margin-bottom: 2%;
+        width:14rem;
+        height:14rem;
+    }
+    
+    .owner2 ul li p {
+        font-size: 1.6rem;
+    }
+    
+    .owner2 ul li p strong {
+        font-size: 1.8rem;
+    }
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+@media all and (max-width:479px) {
+    .pairing_article2 figure figcaption {
+        left: 10%;
+    }
+    
+    .pairing_article2 figure figcaption strong {
+        font-size: 2rem;
+    }
+    
+    .owner1 {
+        width: 80%;
+    }
+    
+    .owner1 p {
+        font-size: 1.4rem;
+    }
+    
+    .owner1 p strong {
+        font-size: 1.8rem;
+    }
+    
+    .owner2 {
+        width: 80%;
+        margin: 10% auto;
+    }
+    .owner2 div h4 {
+        font-size: 1.8rem;
+    }
+    
+    .owner2 div p {
+        font-size: 1.4rem;
+    }
+    
+    .owner2 ul {
+        flex-wrap: wrap;
+    }
+    
+    .owner2 ul li {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 5%;
+    }
+    
+    .owner2 ul li span {
+        margin-bottom: 5%;
+        width:14rem;
+        height:14rem;
+    }
+    
+    .owner2 ul li p {
+        font-size: 1.4rem;
+    }
+    
+    .owner2 ul li p strong {
+        font-size: 1.6rem;
+    }
+}

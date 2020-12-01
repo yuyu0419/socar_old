@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+
+@font-face {
+    font-family: 'AvenirLTPro-Black';
+    src: url('../fonts/392D54_A_0.eot');
+    src: url('../fonts/392D54_A_0.eot?#iefix') format('embedded-opentype'), url('../fonts/392D54_A_0.woff2') format('woff2'), url('../fonts/392D54_A_0.woff') format('woff'), url('../fonts/392D54_A_0.ttf') format('truetype');
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+ul,
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+strong {
+    margin: 0;
+    white-space: pre-line;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color:#FFF;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    z-index:200;
+    position: fixed;
+}
+
+header.active{
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid #eee;
+}
+
+.service_nav {
+    width: 70%;
+    margin: 0.5% auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toHome {
+    width: 13rem;
+}
+
+.toHome img {
+    width: 100%;
+}
+
+.service_nav_a{
+    text-align: right;
+    width: 100%;
+}
+
+.service_nav_a a {
+    color: #505456;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 5%;
+}
+
+
+/* 테블릿  PC(해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {
+    .service_nav {
+        width: 70%;
+        margin: 1% auto;
+    }
+    
+    .toHome {
+        width: 10rem;
+    }
+    .service_nav_a a {
+        font-size: 1.8rem;
+    }
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width:480px) and (max-width:767px) {
+    .service_nav {
+        width: 80%;
+        margin: 1% auto;
+    }
+    
+    .toHome {
+        width: 8rem;
+    }
+
+    .service_nav_a a {
+        font-size: 1.6rem;
+    }
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+@media all and (max-width:479px) {
+    .service_nav {
+        width: 80%;
+        margin: 1% auto;
+    }
+    
+    .toHome {
+        width: 7rem;
+    }
+    .service_nav_a a {
+        font-size: 1.4rem;
+    }
+}
