@@ -185,7 +185,7 @@ header:hover .toHome {
     width:80%;
     margin: 0 auto;
     padding: 0;
-    transform: translate(0,50%);
+    transform: translate(0,70%);
 }
 .btn{
     position: absolute;
@@ -438,6 +438,25 @@ footer {
     }
     .map a{
         font-size: 1.4rem;
+    }
+    /*메뉴 오픈*/
+    .menu{
+        width: 70%;
+    }
+    .btn{
+        position: absolute;
+        top:3%;
+        right:15%;
+    }
+    .menu ul li{
+        font-size: 2rem;
+        margin-bottom: 10%;
+    }
+    .menu ul li:nth-of-type(1){
+        width:100px;
+        height: 25px;
+        background-size: 100%;
+        margin-bottom: 5%;
     }
 
     /*풋터*/
