@@ -25,6 +25,22 @@ window.addEventListener('DOMContentLoaded', function () {
     }
     res(mql);
 
+
+    // 주소창 숨기기 아이폰인 경우
+    if (navigator.userAgent.indexOf('iPhone') != -1) {
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+    }
+    //아이폰이 아닌경우
+    else {
+        hideURLbar();
+    }
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+
+
     var mEvent = { y: 0, y2: 0, state: '' };
 
     window.addEventListener('touchstart', tStart);
@@ -51,10 +67,9 @@ window.addEventListener('DOMContentLoaded', function () {
             }
             if (i <= count - 2) {
                 indi[i].classList.add('active');
-                indiActive();
             }
             articleMove(e)
-
+            indiActive();
         }
     }
 
@@ -73,7 +88,6 @@ window.addEventListener('DOMContentLoaded', function () {
         clearTimeout(mouseClear);
         mouseClear = setTimeout(function () {
             if (e.type != 'click') {
-
                 indi[i].classList.remove('active');
 
                 if (e.wheelDeltaY < 0 || e.detail > 0) {
@@ -85,20 +99,20 @@ window.addEventListener('DOMContentLoaded', function () {
                 }
                 if (i < count - 1) {
                     indi[i].classList.add('active');
-                    indiActive();
                 }
             }
             articleMove(e)
+            indiActive();
         }, 100, e);
     }
 
     //main이 움직이는 함수
-    var winH = window.innerHeight
+    // var winH = window.innerHeight
     function articleMove(e) {
         if (i < count - 1) {
-            num = winH * -i;
+            num = window.innerHeight * -i;
         } else {
-            num = (winH * -(i - 1)) - document.querySelector('footer').offsetHeight;
+            num = (window.innerHeight * -(i - 1)) - document.querySelector('footer').offsetHeight;
         }
         main.style = "transform:translate(0%," + num + "px);"
         setTimeout(function () { window.scrollTo(0, 0); }, 100);
@@ -110,9 +124,13 @@ window.addEventListener('DOMContentLoaded', function () {
 
     //인디게이터 클릭시 이동
     function indiFun(e) {
+        indi[i].classList.remove('active');
         var indiNum = this.dataset.num
         i = indiNum;
+        indi[i].classList.add('active');
+        indiActive()
         setTime(e)
+
     }
     //액티브 인디게이터에 스팬이동 함수
     function indiActive() {
