@@ -65,7 +65,7 @@ body{
 .img_container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     width:100%;
 }
 
@@ -139,7 +139,6 @@ body{
     display: block;
     width:15px;
     height: 15px;
-    transform: translate(0%, -100%);
 }
 .img_container span img{
     width:80%
@@ -175,59 +174,55 @@ body{
     .instructions {
         margin-bottom: 10%;
     }
-    .info2container {
-        display: flex;
-        justify-content: flex-end; 
-    }
-    .mobile {
-        width: 25%;
-        position: relative;
-    }
 
-    .img_container {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        width:100%;
-    }
-    
     .img_container a {
         width: 6rem;
         height: 6rem;
     }
     
     .img_container a p {
-        font-size: 2rem;
-        transform: translate(20%, 0%);
+        transform:translate(5%,-20%);
+        font-size: 0;
     }
     
+    .img_container a:nth-of-type(2) p{
+        transform:translate(0%,-25%);
+    }
+    
+    .img_container a:nth-of-type(3) p{
+        transform:translate(0%,-25%);
+    }
+    .img_container a:nth-of-type(4) p{
+        transform:translate(0%,-20%);
+    }
+    .img_container a:nth-of-type(5) p{
+        transform:translate(0%,-20%);
+    }
     .img_container span{
-        display: block;
         width:10px;
         height: 10px;
-        transform: translate(0%, -100%);
     }
     .img_container span img{
         width:100%
     }
-    
-    
+
     .img_container a.active p {
-        transform:translate(3%,-25%);
+        font-size: 2rem;
+        transform: translate(20%, 0%); 
     }
     
     .img_container a.active:nth-of-type(2) p{
-        transform:translate(0%,-25%);
+        transform: translate(20%, 0%); 
     }
     
     .img_container a.active:nth-of-type(3) p{
-        transform:translate(0%,-30%);
+        transform: translate(20%, 0%); 
     }
     .img_container a.active:nth-of-type(4) p{
-        transform:translate(0%,-25%);
+        transform: translate(20%, 0%); 
     }
     .img_container a.active:nth-of-type(5) p{
-        transform:translate(0%,-25%);
+        transform: translate(20%, 0%); 
     }
     .description_container p {
         font-size: 1.8rem;
@@ -246,19 +241,15 @@ body{
     .instructions {
         width: 80%;
         margin-bottom: 15%;
-    
     }
-    
-    .info2container {
-        display: flex;
-        justify-content: space-around;
-    }
+
     .mobile {
         display: none;
     }
     .mobile img.active{
         display: none;
     }
+    
     .info_right{
         width: 100%;
     }
@@ -268,35 +259,45 @@ body{
     }
     
     .img_container a p {
-        font-size: 2rem;
-        transform: translate(20%, 0%);
-    }
-
-    .img_container span img{
-        width:70%
-    }
-    
-    
-    .img_container a.active p {
-        background: url("../img/information/info02_1.png") center no-repeat;
-        transform:translate(3%,-25%);
-        background-size: 40%;
+        transform:translate(5%,-20%);
         font-size: 0;
     }
     
-    .img_container a.active:nth-of-type(2) p{
+    .img_container a:nth-of-type(2) p{
+        transform:translate(0%,-25%);
+    }
+    
+    .img_container a:nth-of-type(3) p{
+        transform:translate(0%,-25%);
+    }
+    .img_container a:nth-of-type(4) p{
         transform:translate(0%,-20%);
+    }
+    .img_container a:nth-of-type(5) p{
+        transform:translate(0%,-20%);
+    }
+    .img_container span img{
+        width:70%
+    }
+    .img_container a.active p {
+        font-size: 2rem;
+        transform: translate(20%, 0%); 
+    }
+    
+    .img_container a.active:nth-of-type(2) p{
+        transform: translate(20%, 0%); 
     }
     
     .img_container a.active:nth-of-type(3) p{
-        transform:translate(0%,-30%);
+        transform: translate(20%, 0%); 
     }
     .img_container a.active:nth-of-type(4) p{
-        transform:translate(0%,-20%);
+        transform: translate(20%, 0%); 
     }
     .img_container a.active:nth-of-type(5) p{
-        transform:translate(0%,-25%);
+        transform: translate(20%, 0%); 
     }
+
     .description_container p {
         font-size: 1.4rem;
     }
@@ -325,33 +326,43 @@ body{
         display:none;
     }
     .info_right {
-        margin-top: 10%;
+        margin-top: 5%;
         width: 100%;
     }
     .img_container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width:100%;
     }
     .img_container a {
-        width: 5rem;
-        height: 5rem;
+        width: 4rem;
+        height: 4rem;
     }
     
     .img_container a p {
-        width:100%;
-        height:100%;
-        font-size: 1.6rem;
-        color: #fff;
-        transform: translate(20%, -5%);
+        transform:translate(5%,-30%);
+        background-size: 50%;
+        font-size: 0;
+    }
+    .img_container a:nth-of-type(2) p{
+        transform:translate(0%,-35%);
+        background-size: 35%;
     }
     
+    .img_container a:nth-of-type(3) p{
+        transform:translate(0%,-40%);
+        background-size: 50%;
+    }
+    .img_container a:nth-of-type(4) p{
+        transform:translate(0%,-35%);
+        background-size: 50%;
+    }
+    .img_container a:nth-of-type(5) p{
+        transform:translate(0%,-35%);
+        background-size: 50%;
+    }
+
     .img_container span{
         display: block;
-        width:8px;
-        height: 8px;
-        transform: translate(0%, 00%);
+        width:6px;
+        height: 6px;
     }
     .img_container span img{
         width:70%
@@ -359,32 +370,28 @@ body{
     
     
     .img_container a.active p {
-        transform:translate(3%,-25%);
-        background-size: 50%;
+        font-size: 1.6rem;
+        background: none;
+        color: #fff;
+        transform: translate(13%, -20%); 
     }
     
     .img_container a.active:nth-of-type(2) p{
-        background-size: 40%;
-        transform:translate(0%,-30%);
+        background: none;
+        transform: translate(13%, -20%); 
     }
     
     .img_container a.active:nth-of-type(3) p{
-        background-size: 50%;
-        transform:translate(0%,-30%);
+        transform: translate(13%, -20%); 
     }
     .img_container a.active:nth-of-type(4) p{
-        background-size: 50%;
-        transform:translate(0%,-25%);
+        background: none;
+        transform: translate(13%, -20%); 
     }
     .img_container a.active:nth-of-type(5) p{
-        background-size: 50%;
-        transform:translate(0%,-25%);
+        background: none;
+        transform: translate(13%, -20%); 
     }
-    
-    .description_container {
-        margin-top: 5%;
-    }
-    
     .description_container p {
         font-size: 1.4rem;
     }
