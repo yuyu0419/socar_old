@@ -21,7 +21,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8%;
+    margin: 10% auto;
     position: relative;
 }
 
