@@ -1,11 +1,10 @@
 @import url(common.css);
 
 body{
-    /* position: relative; */
+    height: 100vh;
 }
 .top {
     width: 100%;
-    height: 100%;
     position: relative;
 }
 
@@ -30,8 +29,8 @@ body{
 .instructions {
     width: 70%;
     margin: 0 auto;
-    margin-bottom: 20%;
-
+    margin-bottom: 25%;
+    transform: translate(0,25%);
 }
 
 .info2container {
@@ -59,7 +58,6 @@ body{
 .info_right {
     margin-top: 5%;
     width: 75%;
-    height:100%;
 }
 
 .img_container {
@@ -171,9 +169,7 @@ body{
     .info_top h2 {
         font-size: 3.6rem;
     }
-    .instructions {
-        margin-bottom: 10%;
-    }
+    .instructions {}
 
     .img_container a {
         width: 6rem;
@@ -239,8 +235,13 @@ body{
     }
     
     .instructions {
+        height: 60vh;
+        margin-bottom: 0;
         width: 80%;
-        margin-bottom: 15%;
+        transform: translate(0,0);
+    }
+    .info2container {
+        height: 100%;
     }
 
     .mobile {
@@ -251,7 +252,13 @@ body{
     }
     
     .info_right{
-        width: 100%;
+        margin-top: 0;
+        margin:10% 0;
+        height: 50%;
+        transform: translate(0,25%);
+        width:100%;
+    }
+    .img_container{
     }
     .img_container a {
         width: 6rem;
@@ -313,11 +320,11 @@ body{
     }
     .instructions {
         width: 80%;
-        margin-bottom: 15%;
+        margin-bottom: 0%;
+        transform: translate(0,0);
     }
     .info2container {
-        display: flex;
-        justify-content: flex-end; 
+        height: 100%;
     }
     .mobile {
         display: none;
@@ -326,8 +333,11 @@ body{
         display:none;
     }
     .info_right {
-        margin-top: 5%;
-        width: 100%;
+        margin-top: 0;
+        margin:10% 0;
+        height: 50%;
+        transform: translate(0,0%);
+        width:100%;
     }
     .img_container {
     }
@@ -368,7 +378,6 @@ body{
         width:70%
     }
     
-    
     .img_container a.active p {
         font-size: 1.6rem;
         background: none;
@@ -394,8 +403,14 @@ body{
     }
     .description_container p {
         font-size: 1.4rem;
+        display: block;
+        margin-bottom: 5%;
+        opacity: 0.5;
     }
     .description_container p strong {
         font-size: 1.8rem;
+    }
+    .description_container p.active{
+        opacity: 1;
     }
 }
