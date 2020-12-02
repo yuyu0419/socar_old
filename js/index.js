@@ -8,7 +8,48 @@ window.addEventListener('DOMContentLoaded', function () {
         num,
         i = 0,
         count = main.childElementCount,
-        span = document.createElement('span');
+        span = document.createElement('span'),
+        mql = window.matchMedia("screen and (max-width: 1023px)"),
+        resMsg;
+
+    //모바일 or PC 구분
+    mql.addListener(res);
+    function res(e) {
+        if (e.matches) {
+            //모바일
+            resMsg = 'mobile';
+        } else {
+            //PC
+            resMsg = 'pc';
+        }
+        setTime(e)
+    }
+    res(mql);
+
+    var mEvent = { y: 0, y2: 0, state: '' };
+
+    window.addEventListener('touchstart', tStart);
+    window.addEventListener('touchmove', tMove);
+    window.addEventListener('touchend', tEnd);
+
+    function tStart(e) {
+        mEvent.y = e.changedTouches[0].clientY;
+    }
+    function tMove(e) {
+        mEvent.y2 = e.changedTouches[0].clientY;
+    }
+    function tEnd(e) {
+        mEvent.y2 = e.changedTouches[0].clientY;
+
+        if (Math.abs(mEvent.y - mEvent.y2) > 100) {
+            if (mEvent.y > mEvent.y2) {
+                if (i < count - 1) i++;
+            } else {
+                if (i > 0) i--;
+            }
+            articleMove(e)
+        }
+    }
 
     //Edge, chrome
     window.addEventListener('mousewheel', function (e) {
@@ -54,9 +95,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
         if (indi[i].className == 'active') {
             if (i <= count - 1) {
-                console.log(i)
                 indi[i].prepend(span)
-                indi[0].removeChild(s)
+                // indi[0].removeChild(s)
             }
         } else {
             indi[i].prepend('')
