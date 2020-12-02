@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', function () {
 
 
+
     //메인 마우스휠
     var mouseClear,
         main = document.querySelector('main'),
@@ -26,6 +27,13 @@ window.addEventListener('DOMContentLoaded', function () {
     }
     res(mql);
 
+
+    if (resMsg == 'mobile') {
+        window.addEventListener('load', function () { window.scrollTo(0, 1) }, false)
+    }
+
+
+
     var mEvent = { y: 0, y2: 0, state: '' };
 
     window.addEventListener('touchstart', tStart);
@@ -47,6 +55,7 @@ window.addEventListener('DOMContentLoaded', function () {
             } else {
                 if (i > 0) i--;
             }
+            console.log(i)
             articleMove(e)
         }
     }
@@ -74,7 +83,7 @@ window.addEventListener('DOMContentLoaded', function () {
             }
             articleMove()
             indi[i].classList.add('active')
-            indiActive();
+            // indiActive();
         }, 100, e);
     }
 
@@ -84,34 +93,36 @@ window.addEventListener('DOMContentLoaded', function () {
 
     function indiFun(e) {
         var indiNum = this.dataset.num
-        setTime(e)
-        if (indiNum) {
-            indiActive()
+
+        if (indiNum == i + 1) {
+            setTime(e)
+            console.log(i)
         }
     }
 
+    /*
     function indiActive() {
         var s = document.querySelector('.indigater a:nth-of-type(1) span')
 
-        if (indi[i].className == 'active') {
-            if (i <= count - 1) {
-                indi[i].prepend(span)
-                // indi[0].removeChild(s)
-            }
+        if (indi[i].className == 'active' && i <= count - 1) {
+            indi[i].prepend(span)
+            // if (indi[1].className == 'active') {
+            indi[0].removeChild(s)
+            // }
         } else {
             indi[i].prepend('')
         }
     }
-
+*/
 
     function articleMove(e) {
         if (i < count - 1) {
             num = window.innerHeight * -i;
         } else {
             num = (window.innerHeight * -(i - 1)) - document.querySelector('footer').offsetHeight;
+            console.log('a')
         }
         main.style = "transform:translate(0%," + num + "px);"
-
         setTimeout(function () { window.scrollTo(0, 0); }, 100);
     }
 
