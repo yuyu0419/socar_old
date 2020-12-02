@@ -12,7 +12,12 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    if (location.pathname == '/pairing2.html') {
+    var paring2 = location.pathname,
+        paringS = paring2.lastIndexOf('/') + 1,
+        paringE = paring2.lastIndexOf('.'),
+        paringName = paring2.slice(paringS, paringE);
+
+    if (paringName == 'pairing2') {
         var owner = document.querySelector('.owner')
         owner.addEventListener('click', paring)
 
