@@ -43,14 +43,23 @@ section {
 
 .bus_top p {
     font-size: 3rem;
-    color: #00469d;
+    color:#00469d;
+}
+.bus_top p:nth-of-type(1){
+    width: 70%;
+}
+.bus_top p:nth-of-type(2){
+    width: 20%;
 }
 
 .bus_top p a {
     display: block;
+    white-space: nowrap;
     text-align: center;
     font-size: 2rem;
     padding: 2rem;
+    color:#00469d;
+    transition: .5s;
     border: 1px solid #00469d;
 }
 .bus_top p a:hover{
@@ -73,7 +82,7 @@ section {
 .bus_mid li:nth-of-type(2){
     display: block;
 }
-.bus_mid li:nth-of-type(2) p:nth-of-type(1){
+.bus_mid li p:nth-of-type(1){
     margin-bottom: 5%;
 }
 
@@ -179,6 +188,10 @@ footer {
         font-size: 2.4rem;
     }
 
+    .bus_top p:nth-of-type(2){
+        width: 25%;
+    }
+
     .bus_mid li p {
         letter-spacing: -2px;
     }
@@ -200,7 +213,6 @@ footer {
     figure figcaption strong {
         font-size: 3.6rem;
     }
-    
     section {
         width: 70%;
         margin: 0 auto;
@@ -212,6 +224,10 @@ footer {
         letter-spacing: -2px;
     }
 
+    .bus_top p:nth-of-type(2){
+        width: 25%;
+    }
+
     .bus_mid li {
         display: flex;
         justify-content: space-between;
@@ -221,10 +237,6 @@ footer {
     .bus_mid li:nth-of-type(2){
         display: block;
     }
-    .bus_mid li:nth-of-type(2) p:nth-of-type(1){
-        margin-bottom: 5%;
-    }
-    
     .bus_mid li p {
         width: 60%;
         color: #00469d;
@@ -279,7 +291,7 @@ footer {
         width: 65%;
     }
     .bus_top p:nth-of-type(2){
-        width:20%;
+        width:30%;
     }
     .bus_top p a {
         font-size: 1.6rem;
@@ -370,17 +382,26 @@ footer {
     }
     
     .bus_top {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        margin: 0;
     }
     
     .bus_top p {
-        letter-spacing: -0.5px;
         font-size: 1.6rem;
+    }
+    .bus_top p:nth-of-type(1){
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+    .bus_top p:nth-of-type(2){
+        width: 40%;
     }
     
     .bus_top p a {
-        font-size: 1.6rem;
-        padding: 2rem;
+        font-size: 1.4rem;
+        padding: 1rem;
     }
     
     .bus_mid li {
@@ -414,7 +435,7 @@ footer {
     }
     
     .icon_pack p img {
-        width:40%;
+        width:30%;
     }
     
     .footerPack {
