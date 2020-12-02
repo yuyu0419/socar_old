@@ -8,7 +8,6 @@ window.addEventListener('DOMContentLoaded', function () {
         num,
         i = 0,
         count = main.childElementCount,
-        span = document.createElement('span'),
         mql = window.matchMedia("screen and (max-width: 1023px)"),
         resMsg;
 
@@ -42,12 +41,20 @@ window.addEventListener('DOMContentLoaded', function () {
         mEvent.y2 = e.changedTouches[0].clientY;
 
         if (Math.abs(mEvent.y - mEvent.y2) > 100) {
+            // indi[i].classList.remove('active');
             if (mEvent.y > mEvent.y2) {
-                if (i < count - 1) i++;
+                if (i < count - 1) {
+                    i++;
+                }
             } else {
                 if (i > 0) i--;
             }
+            if (i <= count - 2) {
+                indi[i].classList.add('active');
+                indiActive();
+            }
             articleMove(e)
+
         }
     }
 
@@ -61,10 +68,14 @@ window.addEventListener('DOMContentLoaded', function () {
         setTime(e)
     });
 
+    //움직이는 함수에 시간 설정 및 인디게이터 함수 호출
     function setTime(e) {
         clearTimeout(mouseClear);
         mouseClear = setTimeout(function () {
             if (e.type != 'click') {
+
+                indi[i].classList.remove('active');
+
                 if (e.wheelDeltaY < 0 || e.detail > 0) {
                     if (i < count - 1) {
                         i++
@@ -72,32 +83,16 @@ window.addEventListener('DOMContentLoaded', function () {
                 } else {
                     if (i > 0) { i-- }
                 }
+                if (i < count - 1) {
+                    indi[i].classList.add('active');
+                    indiActive();
+                }
             }
-            // indi[i].classList.remove('active')
-            articleMove()
-            indi[i].classList.add('active')
-            indiActive();
+            articleMove(e)
         }, 100, e);
     }
 
-    indi.forEach(function (v, idx) {
-        indi[idx].addEventListener('click', indiFun)
-    })
-
-    function indiFun(e) {
-        var indiNum = this.dataset.num
-        i = indiNum;
-        setTime(e)
-    }
-
-    function indiActive() {
-        var s = document.querySelector('.indigater span')
-
-        if (indi[i].className == 'active' && i <= count - 1) {
-            indi[i].prepend(s)
-        }
-    }
-
+    //main이 움직이는 함수
     var winH = window.innerHeight
     function articleMove(e) {
         if (i < count - 1) {
@@ -108,6 +103,26 @@ window.addEventListener('DOMContentLoaded', function () {
         main.style = "transform:translate(0%," + num + "px);"
         setTimeout(function () { window.scrollTo(0, 0); }, 100);
     }
+
+    indi.forEach(function (v, idx) {
+        indi[idx].addEventListener('click', indiFun)
+    })
+
+    //인디게이터 클릭시 이동
+    function indiFun(e) {
+        var indiNum = this.dataset.num
+        i = indiNum;
+        setTime(e)
+    }
+    //액티브 인디게이터에 스팬이동 함수
+    function indiActive() {
+        var span = document.querySelector('.indigater span')
+        if (indi[i].className == 'active' && i <= count - 1) {
+            indi[i].prepend(span)
+        }
+    }
+
+
 
 
 
