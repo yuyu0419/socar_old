@@ -1,7 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
 
 
-
     //메인 마우스휠
     var mouseClear,
         main = document.querySelector('main'),
@@ -27,13 +26,6 @@ window.addEventListener('DOMContentLoaded', function () {
     }
     res(mql);
 
-
-    if (resMsg == 'mobile') {
-        window.addEventListener('load', function () { window.scrollTo(0, 1) }, false)
-    }
-
-
-
     var mEvent = { y: 0, y2: 0, state: '' };
 
     window.addEventListener('touchstart', tStart);
@@ -55,7 +47,6 @@ window.addEventListener('DOMContentLoaded', function () {
             } else {
                 if (i > 0) i--;
             }
-            console.log(i)
             articleMove(e)
         }
     }
@@ -73,17 +64,19 @@ window.addEventListener('DOMContentLoaded', function () {
     function setTime(e) {
         clearTimeout(mouseClear);
         mouseClear = setTimeout(function () {
-            indi[i].classList.remove('active')
-            if (e.wheelDeltaY < 0 || e.detail > 0) {
-                if (i < count - 1) {
-                    i++
+            if (e.type != 'click') {
+                if (e.wheelDeltaY < 0 || e.detail > 0) {
+                    if (i < count - 1) {
+                        i++
+                    }
+                } else {
+                    if (i > 0) { i-- }
                 }
-            } else {
-                if (i > 0) { i-- }
             }
+            // indi[i].classList.remove('active')
             articleMove()
             indi[i].classList.add('active')
-            // indiActive();
+            indiActive();
         }, 100, e);
     }
 
@@ -93,34 +86,24 @@ window.addEventListener('DOMContentLoaded', function () {
 
     function indiFun(e) {
         var indiNum = this.dataset.num
-
-        if (indiNum == i + 1) {
-            setTime(e)
-            console.log(i)
-        }
+        i = indiNum;
+        setTime(e)
     }
 
-    /*
     function indiActive() {
-        var s = document.querySelector('.indigater a:nth-of-type(1) span')
+        var s = document.querySelector('.indigater span')
 
         if (indi[i].className == 'active' && i <= count - 1) {
-            indi[i].prepend(span)
-            // if (indi[1].className == 'active') {
-            indi[0].removeChild(s)
-            // }
-        } else {
-            indi[i].prepend('')
+            indi[i].prepend(s)
         }
     }
-*/
+
     var winH = window.innerHeight
     function articleMove(e) {
         if (i < count - 1) {
             num = winH * -i;
         } else {
             num = (winH * -(i - 1)) - document.querySelector('footer').offsetHeight;
-            console.log('a')
         }
         main.style = "transform:translate(0%," + num + "px);"
         setTimeout(function () { window.scrollTo(0, 0); }, 100);
