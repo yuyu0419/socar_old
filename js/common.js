@@ -1,7 +1,10 @@
 window.addEventListener('DOMContentLoaded', function () {
     var menuBtn = document.querySelector('.burger'),
         menu = document.querySelector('.menu'),
-        info = location.pathname
+        info = location.pathname,
+        infoS = info.lastIndexOf('/') + 1,
+        infoE = info.lastIndexOf('.'),
+        infoName = info.slice(infoS, infoE);
 
     menuBtn.addEventListener('click', function (e) {
         menu.classList.add('active')
@@ -19,7 +22,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
     //information2 컨텐츠 바꾸기
-    if (info == '/information02.html') {
+    if (infoName == 'information02') {
         var aBtn = document.querySelectorAll('.img_container a');
         aBtn.forEach(function (a, aIdx) {
             aBtn[aIdx].addEventListener('click', imgChange)

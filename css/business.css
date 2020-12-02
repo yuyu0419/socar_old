@@ -88,19 +88,19 @@ section {
 }
 
 .bus_mid li p strong {
-    background: url(../img/business/icon1.png) left no-repeat;
+    background: url("../img/business/icon1.png") left no-repeat;
     font-size: 2.4rem;
     background-size: 10%;
     padding-left: 5rem;
 }
 
 .bus_mid li:nth-of-type(2) p strong {
-    background: url(../img/business/icon2.png) left no-repeat;
+    background: url("../img/business/icon2.png") left no-repeat;
     background-size: 10%;
 }
 
 .bus_mid li:nth-of-type(3) p strong {
-    background: url(../img/business/icon3.png) left no-repeat;
+    background: url("../img/business/icon3.png") left no-repeat;
     background-size: 10%;
 }
 
