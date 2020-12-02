@@ -39,12 +39,13 @@ header {
     width: 100%;
     background-color:#FFF;
     transition: .5s;
+    z-index:200;
+    position: relative;
 }
 
 header.active{
     background-color: rgba(255, 255, 255, 0.7);
     border-bottom: 1px solid #eee;
-    z-index:200;
     top: 0;
     left: 0;
     position: fixed;
