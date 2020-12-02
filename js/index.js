@@ -114,12 +114,12 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     }
 */
-
+    var winH = window.innerHeight
     function articleMove(e) {
         if (i < count - 1) {
-            num = window.innerHeight * -i;
+            num = winH * -i;
         } else {
-            num = (window.innerHeight * -(i - 1)) - document.querySelector('footer').offsetHeight;
+            num = (winH * -(i - 1)) - document.querySelector('footer').offsetHeight;
             console.log('a')
         }
         main.style = "transform:translate(0%," + num + "px);"
