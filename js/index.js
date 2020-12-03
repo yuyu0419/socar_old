@@ -36,13 +36,15 @@ window.addEventListener('DOMContentLoaded', function () {
     }
     function tMove(e) {
         mEvent.y2 = e.changedTouches[0].clientY;
+
+    }
+    function tEnd(e) {
+        mEvent.y2 = e.changedTouches[0].clientY;
+
         var article = main.querySelectorAll('article');
         article.forEach(function (el) {
             el.style = 'height:' + window.innerHeight + 'px';
         })
-    }
-    function tEnd(e) {
-        mEvent.y2 = e.changedTouches[0].clientY;
 
         if (Math.abs(mEvent.y - mEvent.y2) > 100) {
             if (mEvent.y > mEvent.y2) {
@@ -85,6 +87,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
     //움직이는 함수에 시간 설정 및 인디게이터 함수 호출
     function setTime(e) {
+        if (resMsg == 'mobile') {
+            document.querySelector('body').style = "height:" + parseInt(document.documentElement.clientHeight + 5) + "px";
+        }
         clearTimeout(mouseClear);
         mouseClear = setTimeout(function () {
             if (e.type != 'click') {
