@@ -52,7 +52,7 @@ window.addEventListener('DOMContentLoaded', function () {
                     idx = i
                     i++
                     if (i <= count - 2) {
-                        indi[idx].classList.remove('active');
+                        //indi[idx].classList.remove('active');
                     }
                 }
             } else {
@@ -60,14 +60,14 @@ window.addEventListener('DOMContentLoaded', function () {
                     idx = i
                     i--;
                     if (i <= count - 1) {
-                        indi[idx].classList.remove('active');
+                        //indi[idx].classList.remove('active');
                         console.log(idx)
                         console.log(i)
                     }
                 }
             }
             if (i <= count - 2) {
-                indi[i].classList.add('active');
+                //indi[i].classList.add('active');
             }
 
             articleMove(e)
@@ -98,7 +98,7 @@ window.addEventListener('DOMContentLoaded', function () {
                         idx = i
                         i++
                         if (i <= count - 2) {
-                            indi[idx].classList.remove('active');
+                            //indi[idx].classList.remove('active');
                         }
                         // indi[idx].classList.remove('active');
                         // console.log(idx)
@@ -108,14 +108,14 @@ window.addEventListener('DOMContentLoaded', function () {
                         idx = i
                         i--;
                         if (i <= count - 1) {
-                            indi[idx].classList.remove('active');
+                            //indi[idx].classList.remove('active');
                             console.log(idx)
                             console.log(i)
                         }
                     }
                 }
                 if (i < count - 1) {
-                    indi[i].classList.add('active');
+                    //indi[i].classList.add('active');
                 }
             }
             articleMove(e)
