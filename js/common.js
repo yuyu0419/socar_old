@@ -20,7 +20,6 @@ window.addEventListener('DOMContentLoaded', function () {
         var nav = document.querySelector('.service_nav')
     }
 
-
     //information2 컨텐츠 바꾸기
     if (infoName == 'information02') {
         var aBtn = document.querySelectorAll('.img_container a');
