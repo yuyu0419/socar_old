@@ -88,8 +88,8 @@ window.addEventListener('DOMContentLoaded', function () {
         // if (resMsg == 'mobile') {
         setTimeout(function () {
             document.querySelector('body').style = "height:" + parseInt(document.documentElement.clientHeight + 5) + "px";
-            window.scrollTo(0, 1);
-        }, 50);
+            setTimeout(scrollTo, 0, 0, 1);
+        }, 500);
         // }
         clearTimeout(mouseClear);
         mouseClear = setTimeout(function () {
