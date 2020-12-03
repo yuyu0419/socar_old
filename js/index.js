@@ -41,7 +41,10 @@ window.addEventListener('DOMContentLoaded', function () {
     function tEnd(e) {
         mEvent.y2 = e.changedTouches[0].clientY;
 
-
+        var article = main.querySelectorAll('article');
+        article.forEach(function (el) {
+            el.style = 'height:' + window.innerHeight + 'px';
+        })
 
         if (Math.abs(mEvent.y - mEvent.y2) > 100) {
             if (mEvent.y > mEvent.y2) {
@@ -130,10 +133,6 @@ window.addEventListener('DOMContentLoaded', function () {
         } else {
             num = (window.innerHeight * -(i - 1)) - document.querySelector('footer').offsetHeight;
         }
-        var article = main.querySelectorAll('article');
-        article.forEach(function (el) {
-            el.style = 'height:' + window.innerHeight + 'px';
-        })
         setTimeout(function () {
             window.scrollTo(0, 0);
             main.style = "transform:translate(0%," + num + "px);"
