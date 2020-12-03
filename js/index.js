@@ -36,6 +36,10 @@ window.addEventListener('DOMContentLoaded', function () {
     }
     function tMove(e) {
         mEvent.y2 = e.changedTouches[0].clientY;
+        var article = main.querySelectorAll('article');
+        article.forEach(function (el) {
+            el.style = 'height:' + window.innerHeight + 'px';
+        })
     }
     function tEnd(e) {
         mEvent.y2 = e.changedTouches[0].clientY;
@@ -63,10 +67,7 @@ window.addEventListener('DOMContentLoaded', function () {
             if (i <= count - 2) {
                 indi[i].classList.add('active');
             }
-            var article = main.querySelectorAll('article');
-            article.forEach(function (el) {
-                el.style = 'height:' + window.innerHeight + 'px';
-            })
+
             articleMove(e)
             indiActive();
         }
