@@ -94,12 +94,12 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     //main이 움직이는 함수
-    var winH = window.innerHeight
+    // var winH = window.innerHeight
     function articleMove(e) {
         if (i < count - 1) {
-            num = winH * -i;
+            num = window.innerHeight * -i;
         } else {
-            num = (winH * -(i - 1)) - document.querySelector('footer').offsetHeight;
+            num = (window.innerHeight * -(i - 1)) - document.querySelector('footer').offsetHeight;
         }
         main.style = "transform:translate(0%," + num + "px);"
         setTimeout(function () { window.scrollTo(0, 0); }, 100);
