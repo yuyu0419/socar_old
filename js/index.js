@@ -107,7 +107,7 @@ window.addEventListener('DOMContentLoaded', function () {
         setTimeout(function () {
             window.scrollTo(0, 0);
             main.style = "transform:translate(0%," + num + "px);"
-        }, 0);
+        }, 100);
     }
 
     indi.forEach(function (v, idx) {
