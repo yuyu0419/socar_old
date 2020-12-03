@@ -60,7 +60,7 @@ window.addEventListener('DOMContentLoaded', function () {
                     idx = i
                     i--;
                     if (i <= count - 1) {
-                        indi[idx].classList.remove('active');
+                        // indi[idx].classList.remove('active');
                     }
                 }
             }
