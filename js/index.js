@@ -41,10 +41,10 @@ window.addEventListener('DOMContentLoaded', function () {
     function tEnd(e) {
         mEvent.y2 = e.changedTouches[0].clientY;
 
-        var article = main.querySelectorAll('article');
-        article.forEach(function (el) {
-            el.style = 'height:' + window.innerHeight + 'px';
-        })
+        // var article = main.querySelectorAll('article');
+        // article.forEach(function (el) {
+        //     el.style = 'height:' + window.innerHeight + 'px';
+        // })
 
         if (Math.abs(mEvent.y - mEvent.y2) > 100) {
             if (mEvent.y > mEvent.y2) {
@@ -52,7 +52,7 @@ window.addEventListener('DOMContentLoaded', function () {
                     idx = i
                     i++
                     if (i <= count - 2) {
-                        //indi[idx].classList.remove('active');
+                        indi[idx].classList.remove('active');
                     }
                 }
             } else {
@@ -60,14 +60,12 @@ window.addEventListener('DOMContentLoaded', function () {
                     idx = i
                     i--;
                     if (i <= count - 1) {
-                        //indi[idx].classList.remove('active');
-                        console.log(idx)
-                        console.log(i)
+                        indi[idx].classList.remove('active');
                     }
                 }
             }
             if (i <= count - 2) {
-                //indi[i].classList.add('active');
+                indi[i].classList.add('active');
             }
 
             articleMove(e)
@@ -101,9 +99,8 @@ window.addEventListener('DOMContentLoaded', function () {
                         idx = i
                         i++
                         if (i <= count - 2) {
-                            //indi[idx].classList.remove('active');
+                            indi[idx].classList.remove('active');
                         }
-                        // indi[idx].classList.remove('active');
                         // console.log(idx)
                     }
                 } else {
@@ -111,14 +108,14 @@ window.addEventListener('DOMContentLoaded', function () {
                         idx = i
                         i--;
                         if (i <= count - 1) {
-                            //indi[idx].classList.remove('active');
+                            indi[idx].classList.remove('active');
                             console.log(idx)
                             console.log(i)
                         }
                     }
                 }
                 if (i < count - 1) {
-                    //indi[i].classList.add('active');
+                    indi[i].classList.add('active');
                 }
             }
             articleMove(e)
