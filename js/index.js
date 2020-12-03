@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', function () {
         i = 0,
         count = main.childElementCount,
         mql = window.matchMedia("screen and (max-width: 1023px)"),
-        resMsg, idx;
+        resMsg, idx = 0;
 
     //모바일 or PC 구분
     mql.addListener(res);
@@ -51,23 +51,17 @@ window.addEventListener('DOMContentLoaded', function () {
                 if (i < count - 1) {
                     idx = i
                     i++
-                    if (i <= count - 2) {
-                        indi[idx].classList.remove('active');
-                    }
                 }
             } else {
                 if (i > 0) {
                     idx = i
                     i--;
-                    if (i <= count - 1) {
-                        // indi[idx].classList.remove('active');
-                    }
                 }
             }
-            if (i <= count - 2) {
+            if (i < count - 1) {
+                if (idx != count - 1) indi[idx].classList.remove('active');
                 indi[i].classList.add('active');
             }
-
             articleMove(e)
             indiActive();
         }
@@ -98,23 +92,15 @@ window.addEventListener('DOMContentLoaded', function () {
                     if (i < count - 1) {
                         idx = i
                         i++
-                        if (i <= count - 2) {
-                            indi[idx].classList.remove('active');
-                        }
-                        // console.log(idx)
                     }
                 } else {
                     if (i > 0) {
                         idx = i
                         i--;
-                        if (i <= count - 1) {
-                            indi[idx].classList.remove('active');
-                            console.log(idx)
-                            console.log(i)
-                        }
                     }
                 }
                 if (i < count - 1) {
+                    if (idx != count - 1) indi[idx].classList.remove('active');
                     indi[i].classList.add('active');
                 }
             }
