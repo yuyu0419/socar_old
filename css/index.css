@@ -4,9 +4,9 @@ html{
 }
 
 body{
-    min-height: 100%;
+    height: 100%;
   /* mobile viewport bug fix */
-  min-height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
 }
 main{
     transition: .5s;
