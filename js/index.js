@@ -86,10 +86,10 @@ window.addEventListener('DOMContentLoaded', function () {
     //움직이는 함수에 시간 설정 및 인디게이터 함수 호출
     function setTime(e) {
         // if (resMsg == 'mobile') {
-        setTimeout(function () {
-            document.querySelector('body').style = "height:" + parseInt(document.documentElement.clientHeight + 5) + "px";
-            setTimeout(scrollTo, 0, 0, 1);
-        }, 500);
+        // setTimeout(function () {
+        //     document.querySelector('body').style = "height:" + parseInt(document.documentElement.clientHeight + 5) + "px";
+        //     setTimeout(scrollTo, 0, 0, 1);
+        // }, 500);
         // }
         clearTimeout(mouseClear);
         mouseClear = setTimeout(function () {
