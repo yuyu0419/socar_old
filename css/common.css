@@ -528,7 +528,9 @@ footer {
         background: url(../img/common/logo_w.png) center no-repeat;
         background-size: 100%;
     }
-
+    .scroll {
+        bottom: 10%;
+    }
     /*메뉴 오픈*/
     .menu{
         width: 70%;
