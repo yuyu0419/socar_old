@@ -1,12 +1,12 @@
 @import url(common.css);
 html{
-    /* height: -webkit-fill-available; */
+    height: -webkit-fill-available;
 }
 
 body{
-    height: 100%;
-    /* mobile viewport bug fix */
-    /* min-height: -webkit-fill-available; */
+    min-height: 100%;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
 }
 main{
     transition: .5s;
