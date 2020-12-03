@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', function () {
         i = 0,
         count = main.childElementCount,
         mql = window.matchMedia("screen and (max-width: 1023px)"),
-        resMsg;
+        resMsg, idx;
 
     //모바일 or PC 구분
     mql.addListener(res);
@@ -41,13 +41,18 @@ window.addEventListener('DOMContentLoaded', function () {
         mEvent.y2 = e.changedTouches[0].clientY;
 
         if (Math.abs(mEvent.y - mEvent.y2) > 100) {
-            // indi[i].classList.remove('active');
             if (mEvent.y > mEvent.y2) {
                 if (i < count - 1) {
-                    i++;
+                    idx = i
+                    i++
+                    indi[idx].classList.remove('active');
                 }
             } else {
-                if (i > 0) i--;
+                if (i > 0) {
+                    idx = i
+                    i--;
+                    indi[idx].classList.remove('active');
+                }
             }
             if (i <= count - 2) {
                 indi[i].classList.add('active');
@@ -76,14 +81,22 @@ window.addEventListener('DOMContentLoaded', function () {
         clearTimeout(mouseClear);
         mouseClear = setTimeout(function () {
             if (e.type != 'click') {
-                indi[i].classList.remove('active');
                 if (e.wheelDeltaY < 0 || e.detail > 0) {
                     if (i < count - 1) {
+                        idx = i
                         i++
+                        indi[idx].classList.remove('active');
+                        console.log(idx)
                     }
                 } else {
-                    if (i > 0) { i-- }
+                    if (i > 0) {
+                        idx = i
+                        i--;
+                        indi[idx].classList.remove('active');
+                        console.log(idx)
+                    }
                 }
+                // indi[idx].classList.remove('active');
                 if (i < count - 1) {
                     indi[i].classList.add('active');
                 }
