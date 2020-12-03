@@ -52,6 +52,10 @@ window.addEventListener('DOMContentLoaded', function () {
             if (i <= count - 2) {
                 indi[i].classList.add('active');
             }
+            var article = main.querySelectorAll('article');
+            article.forEach(function (el) {
+                el.style = 'height:' + window.innerHeight + 'px';
+            })
             articleMove(e)
             indiActive();
         }
@@ -73,7 +77,6 @@ window.addEventListener('DOMContentLoaded', function () {
         mouseClear = setTimeout(function () {
             if (e.type != 'click') {
                 indi[i].classList.remove('active');
-
                 if (e.wheelDeltaY < 0 || e.detail > 0) {
                     if (i < count - 1) {
                         i++
@@ -91,19 +94,12 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     //main이 움직이는 함수
-    // var winH = window.innerHeight
     function articleMove(e) {
         if (i < count - 1) {
             num = window.innerHeight * -i;
         } else {
             num = (window.innerHeight * -(i - 1)) - document.querySelector('footer').offsetHeight;
         }
-        var article = main.querySelectorAll('article');
-        article.forEach(function (el) {
-            el.style = 'height:' + window.innerHeight + 'px';
-        })
-
-
         setTimeout(function () {
             window.scrollTo(0, 0);
             main.style = "transform:translate(0%," + num + "px);"
