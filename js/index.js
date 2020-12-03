@@ -41,11 +41,6 @@ window.addEventListener('DOMContentLoaded', function () {
     function tEnd(e) {
         mEvent.y2 = e.changedTouches[0].clientY;
 
-        // var article = main.querySelectorAll('article');
-        // article.forEach(function (el) {
-        //     el.style = 'height:' + window.innerHeight + 'px';
-        // })
-
         if (Math.abs(mEvent.y - mEvent.y2) > 100) {
             if (mEvent.y > mEvent.y2) {
                 if (i < count - 1) {
@@ -119,6 +114,12 @@ window.addEventListener('DOMContentLoaded', function () {
         setTimeout(function () {
             window.scrollTo(0, 0);
             main.style = "transform:translate(0%," + num + "px);"
+
+            var article = main.querySelectorAll('article');
+
+            article.forEach(function (el) {
+                el.style = 'height:' + window.innerHeight + 'px';
+            })
         }, 100);
     }
 
