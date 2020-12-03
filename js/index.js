@@ -45,13 +45,19 @@ window.addEventListener('DOMContentLoaded', function () {
                 if (i < count - 1) {
                     idx = i
                     i++
-                    indi[idx].classList.remove('active');
+                    if (i <= count - 2) {
+                        indi[idx].classList.remove('active');
+                    }
                 }
             } else {
                 if (i > 0) {
                     idx = i
                     i--;
-                    indi[idx].classList.remove('active');
+                    if (i <= count - 1) {
+                        indi[idx].classList.remove('active');
+                        console.log(idx)
+                        console.log(i)
+                    }
                 }
             }
             if (i <= count - 2) {
@@ -85,18 +91,23 @@ window.addEventListener('DOMContentLoaded', function () {
                     if (i < count - 1) {
                         idx = i
                         i++
-                        indi[idx].classList.remove('active');
-                        console.log(idx)
+                        if (i <= count - 2) {
+                            indi[idx].classList.remove('active');
+                        }
+                        // indi[idx].classList.remove('active');
+                        // console.log(idx)
                     }
                 } else {
                     if (i > 0) {
                         idx = i
                         i--;
-                        indi[idx].classList.remove('active');
-                        console.log(idx)
+                        if (i <= count - 1) {
+                            indi[idx].classList.remove('active');
+                            console.log(idx)
+                            console.log(i)
+                        }
                     }
                 }
-                // indi[idx].classList.remove('active');
                 if (i < count - 1) {
                     indi[i].classList.add('active');
                 }
@@ -136,8 +147,10 @@ window.addEventListener('DOMContentLoaded', function () {
     //액티브 인디게이터에 스팬이동 함수
     function indiActive() {
         var span = document.querySelector('.indigater span')
-        if (indi[i].className == 'active' && i <= count - 1) {
-            indi[i].prepend(span)
+        if (i <= count - 2) {
+            if (indi[i].className == 'active') {
+                indi[i].prepend(span)
+            }
         }
     }
 
