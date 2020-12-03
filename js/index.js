@@ -103,8 +103,11 @@ window.addEventListener('DOMContentLoaded', function () {
             el.style = 'height:' + window.innerHeight + 'px';
         })
 
-        main.style = "transform:translate(0%," + num + "px);"
-        setTimeout(function () { window.scrollTo(0, 0); }, 100);
+
+        setTimeout(function () {
+            window.scrollTo(0, 0);
+            main.style = "transform:translate(0%," + num + "px);"
+        }, 100);
     }
 
     indi.forEach(function (v, idx) {
