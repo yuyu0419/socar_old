@@ -4,7 +4,7 @@ body{
     height: 100vh;
     overflow: hidden;
 }
-main{
+main section{
     transition: .5s;
 }
 article{
