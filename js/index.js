@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     //메인 마우스휠
     var mouseClear,
-        main = document.querySelector('main'),
+        main = document.querySelector('section'),
         indi = document.querySelectorAll('.indigater a'),
         num,
         i = 0,
