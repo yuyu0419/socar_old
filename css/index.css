@@ -242,7 +242,12 @@ article{
 
 /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
 @media all and (max-width:479px) {
-    html,body{height:100vh; overflow:hidden;}
+    html,body{
+        width:100%; height:100vh; overflow:hidden;
+        position: fixed;
+        top:0;
+        left: 0;
+    }
     main{
         position: fixed;
         top:0;
