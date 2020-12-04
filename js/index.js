@@ -27,9 +27,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
     var mEvent = { y: 0, y2: 0, state: '' };
 
-    window.addEventListener('touchstart', tStart);
-    window.addEventListener('touchmove', tMove);
-    window.addEventListener('touchend', tEnd);
+    main.addEventListener('touchstart', tStart);
+    main.addEventListener('touchmove', tMove);
+    main.addEventListener('touchend', tEnd);
 
     function tStart(e) {
         mEvent.y = e.changedTouches[0].clientY;
@@ -146,14 +146,6 @@ window.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
-
-
-
-
-
-
-
-
 
 
 
