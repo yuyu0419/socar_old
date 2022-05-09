@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+// font
+// $Noto: "Noto Sans KR";
+$SY: "SamYang";
+
+// color
+$primaryColor: #f05334;
+$pointColor: #f05334;
+
+$aqua: #4ca6a1;
+$purple: #894e9f;
+$allulose_purple: #b43993;
+$green: #61922b;
+$orange: #e1705a;
+
+$bgColor-100: #ffffff;
+$bgColor-200: #f7f7f7;
+$bgColor-300: #f5f0ea;
+$bgColor-400: #edf6f5;
+$bgColor-500: #fbf0ee;
+
+$txtColor-100: #aaaaaa;
+$txtColor-200: #888888;
+$txtColor-300: #666666;
+$txtColor-400: #333333;
+$txtColor-500: #1c1c1c;
+
+$prdColor-100: #f05334;
+
+$lineColor-100: #ffffff;
+$lineColor-200: #eeeeee;
+$lineColor-300: #dddddd;
+$lineColor-400: #cccccc;
+
+// size
+$maxSize: 1920px;
+$innerSizeS: 1200px;
+$innerSizeM: 1440px;
+
+// path
+$lang: "kr";
+$imgPath: "/resources/images/#{$lang}";
+$fontPath: "/resources/fonts";
+
+// animation
+$animateTiming: 0.15s;
