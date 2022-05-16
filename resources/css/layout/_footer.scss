@@ -1,0 +1,66 @@
+.footer {
+    padding: 50px 0;
+    background: #28323c;
+    font-size: 15px;
+    color: #fff;
+    .inner {
+    }
+    .guide_list {
+        margin-bottom: 20px;
+        li {
+            display: inline-block;
+            width: auto;
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        a {
+            display: block;
+            font-size: 15px;
+        }
+    }
+    .contact {
+        margin-bottom: 20px;
+    }
+    .footer_bottom {
+        p {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+    }
+    .sns_wrap {
+        $list: youtube, naver, facebook, instagram;
+        @each $item in $list {
+            li {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+                &.#{$item} {
+                    a {
+                        @include background("common/#{$item}.png", center, no-repeat);
+                        background-size: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .copyright {
+    }
+    dl {
+        display: inline-block;
+        width: auto;
+        margin-right: 20px;
+        dt {
+            display: inline-block;
+        }
+        dd {
+            display: inline-block;
+        }
+    }
+}

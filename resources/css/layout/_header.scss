@@ -1,0 +1,69 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    .header_inner {
+        max-width: $innerSizeS;
+        margin: 0 auto;
+        @include clearfix;
+        font-size: 0;
+    }
+    .logo {
+        float: left;
+        // display: inline-block;
+        width: 125px;
+        height: 30px;
+        margin-right: 75px;
+        margin-top: 20px;
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            @include background("/common/logo_w.png", center, no-repeat, 100%);
+        }
+    }
+    .gnb_wrap {
+        // display: inline-block;
+        float: RIGHT;
+        width: calc(100% - 200px);
+        max-width: 900px;
+        padding-top: 30px;
+        vertical-align: top;
+    }
+    .gnb {
+        font-size: 0;
+        color: #fff;
+        > li {
+            display: inline-block;
+            width: 20%;
+            max-width: 180px;
+            vertical-align: top;
+            &.servie {
+                width: 60%;
+                max-width: 540px;
+            }
+        }
+        a {
+            font-size: 20px;
+        }
+    }
+    .depth1 {
+        color: #f55;
+    }
+    .depth2_wrap {
+        color: rgb(13, 0, 255);
+        > li {
+            > a {
+            }
+        }
+    }
+    .depth3_wrap {
+        color: rgba(20, 116, 1, 0.56);
+        li {
+            a {
+            }
+        }
+    }
+}

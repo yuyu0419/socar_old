@@ -1,0 +1,9 @@
+.container {
+    overflow: hidden;
+    min-width: $innerSizeM;
+    margin: 0 auto;
+}
+.inner {
+    max-width: $innerSizeS;
+    margin: 0 auto;
+}

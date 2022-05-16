@@ -8,176 +8,77 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link href="css/index.css" rel="stylesheet" type="text/css">
-    <script src="js/index.js"></script>
-    <!-- <script src="js/common.js"></script> -->
+    <link href="../resources/css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul class="navigation">
-                <a class="toHome" href="index.html"></a>
-                <li><a>쏘카 소개</a>
-                    <div class="navHover">
-                        <a href="information.html">쏘카란?</a>
-                        <a href="information02.html">쏘카 이용안내</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="business.html" target="_blank">쏘카 비즈니스</a>
-                </li>
-                <li><a href="plan.html" target="_blank">쏘카 플랜</a></li>
-                <li><a href="pairing.html" target="_blank">쏘카 페어링</a></li>
-                <div class="burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="menu">
-        <div class="btn">
-            <div class="close">
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <ul>
-            <li><a class="home" href="index.html"></a></li>
-            <li><a>쏘카 소개</a>
-                <div class="info">
-                    <a href="information.html">쏘카란?</a>
-                    <a href="information02.html">쏘카 이용안내</a>
-                </div>
-            </li>
-            <li>
-                <a href="business.html" target="_blank">쏘카 비즈니스</a>
-            </li>
-            <li><a href="plan.html" target="_blank">쏘카 플랜</a></li>
-            <li><a href="pairing.html" target="_blank">쏘카 페어링</a></li>
-        </ul>
-    </div>
-    <aside class="indigater">
-        <a class="active" data-num="0"><span></span>S</a>
-        <a data-num="1">O</a>
-        <a data-num="2">C</a>
-        <a data-num="3">A</a>
-        <a data-num="4">R</a>
-    </aside>
-    <main>
-        <section>
-            <article class="main1">
-                <div class="mainVisual">
-                    <video src="img/index/main1.mp4" autoplay muted loop>
+    <div class="wrap">
+        <header id="header" include-html="include/header.html"></header>
+        <!-- https://kay0426.tistory.com/27 -->
+        
+        <!-- <aside class="indigater">
+            <a class="active" data-num="0"><span></span>S</a>
+            <a data-num="1">O</a>
+            <a data-num="2">C</a>
+            <a data-num="3">A</a>
+            <a data-num="4">R</a>
+        </aside> -->
+        <div class="container">
+            <div class="main_visual">
+                <div class="slide">
+                    <video src="../resources/images/index/main1.mp4" autoplay muted loop>
                         이 브라우저에서 지원하지 않는 영상입니다.
                     </video>
-                </div>
-
-
-                <div class="right">
-                    <h2>차가 필요한 모든 순간,
-                        <strong>쏘카</strong></h2>
-                </div>
-                <div class="scroll">
-                    <img src="img/common/scroll.png" alt="">
-                </div>
-            </article>
-
-            <article class="main2">
-                <div class="mainVisual">
-                    <img src="img/index/main2.jpg" alt="">
-                </div>
-
-                <div class="left">
-                    <h2>24시간 언제나,
-                        원하는 곳에서,
-                        필요한만큼
-                        <a href="information.html">MORE</a></h2>
-                </div>
-                <div class="scroll">
-                    <img src="img/common/scroll.png" alt="">
-                </div>
-            </article>
-
-            <article class="main3">
-                <div class="mainVisual">
-                    <img src="img/index/main3.jpg" alt="">
-                </div>
-                <div class="right">
-                    <h2>스마트한 직장인들의 이동
-                        <strong>쏘카 비즈니스</strong>
-                        <a href="business.html" target="_blank">MORE</a></h2>
-                </div>
-                <div class="scroll">
-                    <img src="img/common/scroll.png" alt="">
-                </div>
-            </article>
-
-            <article class="main4">
-                <div class="mainVisual">
-                    <img src="img/index/main4.jpg" alt="">
-                </div>
-                <div class="left">
-                    <h2>취향으로 연결되는
-                        <strong>쏘카 페어링</strong>
-                        <a href="pairing.html" target="_blank">MORE</a></h2>
-                </div>
-                <div class="scroll">
-                    <img src="img/common/scroll.png" alt="">
-                </div>
-            </article>
-
-            <article class="main5">
-                <div class="mainVisual">
-                    <img src="img/index/main5.jpg" alt="">
-                </div>
-                <div class="right">
-                    <h2>더 오래, 더 자유롭게
-                        <strong>쏘카 플랜</strong>
-                        <a href="plan.html" target="_blank">MORE</a></h2>
-                </div>
-            </article>
-
-            <footer>
-                <div class="footerPack">
-                    <div class="aTag">
-                        <a>회사소개</a>
-                        <a>인재채용</a>
-                        <a>나눔카</a>
-                        <a>이용약관</a>
-                        <a>개인정보처리방침</a>
-                        <a>위치기반서비스 이용약관</a>
-                        <a>고객센터</a>
-                        <a>제휴문의</a>
-                    </div>
-                    <div class="fBottom">
-                        <p>주소. 제주특별자치도 제주시 연미길 42 (오라삼동) 전화. 1661-3315 팩스. 02-6969-9333
-                            (주)쏘카 통신판매업 사업자정보 확인
-                            신고: 제 2019-제주오라-3호, 정보보호최고책임자: 원종필, 사업자등록번호: 616-81-90529, 대표자: 박재욱
-
-                            © 2019 SOCAR All rights reserved.</p>
-                        <div class="sns">
-                            <a href="#"><img src="img/common/blog.png" alt=""></a>
-                            <a href="#"><img src="img/common/facebook.png" alt=""></a>
-                            <a href="#"><img src="img/common/instagram.png" alt=""></a>
-                            <a href="#"><img src="img/common/youtube.png" alt=""></a>
+                    <div class="inner">
+                        <div class="txt_area right">
+                            <h2>차가 필요한 모든 순간, <strong>쏘카</strong></h2>
                         </div>
                     </div>
                 </div>
-            </footer>
-        </section>
-    </main>
-
-    <a href="https://play.google.com/store/apps/details?id=socar.Socar" target="_blank" class="download"><img
-            src="img/common/download.png" alt=""></a>
-
-
-
-
-
+                <div class="slide">
+                    <div class="bg"></div>
+                    <div class="inner">
+                        <div class="txt_area left">
+                            <h2>24시간 언제나,<br/>원하는 곳에서,<br/>필요한만큼</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="bg"></div>
+                    <div class="inner">
+                        <div class="txt_area right">
+                            <h2>스마트한 직장인들의 이동 <strong>쏘카 비즈니스</strong></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="bg"></div>
+                    <div class="inner">
+                        <div class="txt_area left">
+                            <h2>취향으로 연결되는 <strong>쏘카 페어링</strong></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="bg"></div>
+                    <div class="inner">
+                        <div class="txt_area left">
+                            <h2>더 오래, 더 자유롭게 <strong>쏘카 플랜</strong></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <a href="https://play.google.com/store/apps/details?id=socar.Socar" target="_blank" class="download"><img src="img/common/download.png" alt=""></a> -->
+        <div id="footer" class="footer" include-html="include/footer.html"></div>
+    </div>
 </body>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../resources/js/components.js"></script>
+<!-- <script src="footer.js"></script> -->
+<!-- <script src="js/common.js"></script> -->
+<script>
+    includeHTML();
+</script>
 </html>
